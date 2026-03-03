@@ -136,6 +136,7 @@ body {
 
 .employee__names--item:hover {
   background-color: var(--primary-dark);
+  color: white;
   transform: scale(1.05);
 }
 

@@ -1,48 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>Employee DBMS</title>
+    <title>PC</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="icon" type="image/avif" href="./whitecross.avif" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-
     <div id="app">
       <header class="header">
-        <h1>Employee Portal</h1>
-        <button class="createEmployee"><span>Add Homie</span></button>
+        <h1>Player Cell</h1>
+        <button class="createEmployee"><span>Add Player</span></button>
       </header>
     </div>
 
     <div class="employees">
       <div class="employees__names">
-        <span class="employees__names--title">Employee List</span>
+        <span class="employees__names--title">Player List</span>
         <div class="employees__names--list"></div>
       </div>
       <div class="employees__single">
-        <span class="employees__single--title">Employee Information</span>
+        <span class="employees__single--title">Player Information</span>
         <div class="employees__single--info"></div>
       </div>
     </div>
 
     <div class="addEmployee">
       <form class="addEmployee_create">
-        Add a new employee
+        Add a new member
         <div>
-          <input type="text" name="firstName" placeholder="First Name" required />
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
           <input type="text" name="lastName" placeholder="Last Name" required />
         </div>
         <input type="text" name="imageUrl" placeholder="Image URL (Optional)" />
         <input type="email" name="email" placeholder="Email" required />
-        <input type="number" name="contactNumber" placeholder="Contact" required />
+        <input
+          type="number"
+          name="contactNumber"
+          placeholder="Contact"
+          required
+        />
         <input type="number" name="salary" placeholder="Salary" required />
         <input type="text" name="address" placeholder="Address" required />
-        <input type="date" name="dob" placeholder="Date of Birth" class="addEmployee_create--dob" required />
-        <input type="submit" class="addEmployee_create--submit" value="submit" />
+        <input
+          type="date"
+          name="dob"
+          placeholder="Date of Birth"
+          class="addEmployee_create--dob"
+          required
+        />
+        <input
+          type="submit"
+          class="addEmployee_create--submit"
+          value="submit"
+        />
       </form>
     </div>
 
-    <script src="src/index.js"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>
