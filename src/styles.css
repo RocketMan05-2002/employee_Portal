@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General Styles */
 body {
   font-family:
@@ -300,33 +306,64 @@ body {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    overflow: hidden; /* Prevent body scrolling to fix sections in place */
+  }
+
+  .header {
+    border-radius: 0;
+    padding: 10px 15px;
+  }
+
   .header h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .employees {
+    background: red;
     flex-direction: column;
-    height: calc(100vh - 120px);
-    gap: 10px;
+    height: calc(100vh - 60px); /* Adjust for header height */
+    margin-top: 0;
+    gap: 0;
   }
 
   .employees__names,
   .employees__single {
     width: 100% !important;
     height: 50% !important;
-    overflow-y: auto;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
   }
 
-  .employees > div {
-    height: 100%; /* Take up the assigned 50% height */
+  .employees__single {
+    border-bottom: none;
+    background-color: #fafbfc;
+  }
+
+  .employees > div:hover {
+    transform: none; /* Disable hover scale on mobile */
   }
 
   .employees__single--info > img {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
+  }
+
+  .employees__single--heading {
+    font-size: 20px;
   }
 
   .addEmployee_create {
     width: 90%;
+  }
+
+  /* Ensure the list and info are scrollable independently */
+  .employees__names--list,
+  .employees__single--info {
+    overflow-y: auto;
+    flex-grow: 1;
   }
 }
